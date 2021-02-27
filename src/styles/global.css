@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 :root{
-  --write:#fff;
+  --white:#fff;
   --background:#f2f3f5;
   --gray-line: #dcdde0;
   --text:#666666;
@@ -29,7 +29,7 @@
   }
 }
 body{
-  blackground: var(--background);
+  background: var(--background);
   color: var(--text);
 }
 body, input, textarea, button{ 
