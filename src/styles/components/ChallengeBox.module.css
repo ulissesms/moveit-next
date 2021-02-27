@@ -35,3 +35,13 @@
 .challengeNotActive p img{
   margin-bottom: 1rem;
 }
+.challengeActive{
+  height:100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.challengeActive header{
+  color: var(--blue);
+  
+}
