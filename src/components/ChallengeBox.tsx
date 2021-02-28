@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext'
 export function ChallengeBox(){
 
-  const { activeChallenge } = useContext(ChallengesContext)
+  const { activeChallenge, resetChallenge } = useContext(ChallengesContext)
 
 
   return(
@@ -20,6 +20,7 @@ export function ChallengeBox(){
             <button
               type="button"
               className={styles.challengeFaileButton}
+              onClick={resetChallenge}
             >
               Falhei
             </button>
