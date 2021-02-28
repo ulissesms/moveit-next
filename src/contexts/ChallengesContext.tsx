@@ -13,7 +13,7 @@ interface ChallengesContextData{
       levelUp:()=>void
       currentExperience:number
       challengesCompleted:number
-      activeChallenge
+      activeChallenge:Challenge
       startNewChallenge:()=>void
 }
 
@@ -45,7 +45,8 @@ export function ChallengesProvider({children}: ChallengeProviderProps){
       levelUp,
       currentExperience,
       challengesCompleted,
-      startNewChallenge
+      startNewChallenge,
+      activeChallenge
       }}>
         {children}
     </ChallengesContext.Provider>
