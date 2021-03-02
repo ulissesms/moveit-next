@@ -7,7 +7,7 @@ interface CountdownContextData{
   hasFinished:boolean,
   isActive:boolean,
   startCountdown: () =>void,
-  restCountdown:( )=> void,
+  resetCountdown:( )=> void,
 }
 interface CountdownProviderProps{
   children:ReactNode
@@ -26,9 +26,10 @@ export const CountdownContext = createContext({} as CountdownContextData)
   function startCountdown () {
     setIsActive(true);
   }
-  function restCountdown () {
+  function resetCountdown () {
     clearTimeout(countdownTimeout);
-    setIsActive(false);
+    setIsActive(false)
+    setHasFinished(false)
     setTime(0.1*60);
 
   }
@@ -51,7 +52,7 @@ export const CountdownContext = createContext({} as CountdownContextData)
       hasFinished,
       isActive,
       startCountdown,
-      restCountdown
+      resetCountdown
     }}>
       {children}
     </CountdownContext.Provider>
