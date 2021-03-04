@@ -12,7 +12,7 @@ import { GetServerSideProps } from 'next'
 import styles from '../styles/pages/Home.module.css'
 
 interface HomeProps {
-  level: number,
+  level: number
   currentExperience:number
   challengesCompleted:number
 }
@@ -26,26 +26,26 @@ export default function Home(props: HomeProps) {
       challengesCompleted={props.challengesCompleted}
     >
 
-    <div className={styles.container}>
-      
-        <Head>
-          <title> Inicio | move.it</title>
-        </Head>
-      
-      <ExperienceBar/>
-      <CountdownProvider>
-        <section>
-          <div>
-            <Profile/>
-            <CompletedChallenges/>
-            <Countdown/>
-          </div>
-          <div>
-            <ChallengeBox/>
-          </div>
-        </section>
-      </CountdownProvider>
-    </div>
+      <div className={styles.container}>
+        
+          <Head>
+            <title> Inicio | move.it</title>
+          </Head>
+        
+        <ExperienceBar/>
+        <CountdownProvider>
+          <section>
+            <div>
+              <Profile/>
+              <CompletedChallenges/>
+              <Countdown/>
+            </div>
+            <div>
+              <ChallengeBox/>
+            </div>
+          </section>
+        </CountdownProvider>
+      </div>
     </ChallengesProvider>
   )
 }
@@ -61,4 +61,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) =>{
       challengesCompleted:Number(challengesCompleted)
     }
   }
-}
+} 
